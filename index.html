@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>📝 Todo App</h1>
+      </div>
+
+      <div class="input-container">
+        <input type="text" id="task-input" placeholder="Enter a new task..." />
+        <button id="add-btn">Add Task</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" id="clear-completed">
+          Clear Completed
+        </button>
+        <button class="control-btn" id="clear-all">Clear All</button>
+      </div>
+
+      <div class="task-list" id="task-list">
+        <!-- Tasks will be rendered here -->
+      </div>
+
+      <div class="stats" id="stats">
+        <span id="total-tasks">0</span> tasks total,
+        <span id="completed-tasks">0</span> completed,
+        <span id="pending-tasks">0</span> pending
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="edit-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2>Edit Task</h2>
+        <input type="text" id="edit-input" placeholder="Edit task..." />
+        <div class="modal-actions">
+          <button class="modal-btn cancel-btn" id="cancel-edit">Cancel</button>
+          <button class="modal-btn save-btn" id="save-edit">Save</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
